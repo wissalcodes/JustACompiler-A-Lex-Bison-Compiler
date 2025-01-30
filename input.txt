@@ -1,0 +1,32 @@
+INT i;
+INT j;
+CONST MAX = 10;
+ARRAY OF INT TABLEAU[MAX];
+STRUCT p1 {
+    INT x1 ; 
+    INT y1 ;
+};
+STRUCT p2 {
+    INT x2 ;
+    INT y2 ;
+};
+BOOL condition;
+STRING message;
+BEGIN
+x1 = 14 ;
+x2 = 9;
+y1 = 7;
+y2 = 6;
+condition = ( x1 > x2 ) | (x1 < (x2 + 5) );
+repeat(condition & ( i < MAX )){
+    i = i + 1 ;
+    j = i ;
+    emit("La valeur de i est : %I ",i);
+    repeat(j < i){
+        emit("La valeur de j est : %I ",j);
+        j = j + 1 ;
+    }
+}
+message = "Calcul effectué avec succès";
+emit("Résultat: %S ", message);
+END
